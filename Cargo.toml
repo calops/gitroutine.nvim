@@ -1,0 +1,25 @@
+[package]
+name = "gitroutine"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+neovim-0-8 = ["nvim-oxi/neovim-0-8", "gitroutine-macros/neovim-0-8"]
+neovim-0-9 = ["nvim-oxi/neovim-0-9", "gitroutine-macros/neovim-0-9"]
+neovim-nightly = ["nvim-oxi/neovim-nightly", "gitroutine-macros/neovim-nightly"]
+
+[dependencies]
+clap = { version = "4.2.4", features = ["derive"] }
+clap_complete = { version = "4.2.1", features = ["unstable-dynamic"] }
+gitroutine-macros = { path = "./macros" }
+lazy_static = "1.4.0"
+nvim-oxi = "0.3.0"
+# nvim-oxi = { path = "../nvim-oxi/crates/nvim-oxi" }
+octocrab = "0.20.0"
+serde = { version = "1.0.160", features = ["derive", "serde_derive"] }
+strum = { version = "0.24.1", features = ["derive"] }
+thiserror = "1.0.40"
+tokio = { version = "1.27.0", features = ["rt-multi-thread"] }

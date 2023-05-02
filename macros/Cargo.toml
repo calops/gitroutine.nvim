@@ -1,0 +1,18 @@
+[package]
+name = "gitroutine-macros"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[features]
+neovim-0-8 = ["nvim-oxi/neovim-0-8"]
+neovim-0-9 = ["nvim-oxi/neovim-0-9"]
+neovim-nightly = ["nvim-oxi/neovim-nightly"]
+
+[dependencies]
+nvim-oxi = "0.3.0"
+# nvim-oxi = { path = "../../nvim-oxi/crates/nvim-oxi" }
+quote = "1.0.26"
+syn = "2.0.15"

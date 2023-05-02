@@ -1,0 +1,15 @@
+edition = "2021"
+array_width = 72
+attr_fn_like_width = 84
+chain_width = 72
+fn_call_width = 72
+max_width = 120
+short_array_element_width_threshold = 12
+single_line_if_else_max_width = 60
+struct_lit_width = 22
+struct_variant_width = 42
+use_field_init_shorthand = true
+use_try_shorthand = true
+imports_granularity = "One"
+wrap_comments = true
+format_macro_bodies = true
